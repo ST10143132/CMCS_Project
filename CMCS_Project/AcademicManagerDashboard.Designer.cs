@@ -4,7 +4,6 @@
     {
         private System.ComponentModel.IContainer components = null;
 
-        // Dispose method to clean up resources
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -27,7 +26,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.Location = new System.Drawing.Point(61, 18);
+            this.labelTitle.Location = new System.Drawing.Point(37, 9);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(332, 30);
             this.labelTitle.TabIndex = 0;

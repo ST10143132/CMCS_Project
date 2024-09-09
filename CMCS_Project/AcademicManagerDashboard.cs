@@ -1,5 +1,6 @@
-﻿using System.Windows.Forms;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace CMCS_Project
 {
@@ -10,23 +11,29 @@ namespace CMCS_Project
             InitializeComponent();
         }
 
+        // Class to represent a claim record
+        public class ClaimRecord
+        {
+            public string ClaimID { get; set; }
+            public string LecturerName { get; set; }
+            public int HoursWorked { get; set; }
+            public string Status { get; set; }
+        }
+
         private void AcademicManagerDashboard_Load(object sender, EventArgs e)
         {
-            // Simulate data for claims
-            var claims = new System.Data.DataTable();
-            claims.Columns.Add("Claim ID");
-            claims.Columns.Add("Lecturer Name");
-            claims.Columns.Add("Hours Worked");
-            claims.Columns.Add("Status");
+            // Step 1: Create a list of ClaimRecord objects to simulate data
+            var claims = new List<ClaimRecord>
+            {
+                new ClaimRecord { ClaimID = "001", LecturerName = "John Doe", HoursWorked = 20, Status = "Approved" },
+                new ClaimRecord { ClaimID = "002", LecturerName = "Jane Smith", HoursWorked = 25, Status = "Pending" }
+            };
 
-            claims.Rows.Add("001", "John Doe", "20", "Approved");
-            claims.Rows.Add("002", "Jane Smith", "25", "Pending");
-
-            // Display the total number of claims
-            textBoxTotalClaims.Text = claims.Rows.Count.ToString();
-
-            // Bind the claims data to the DataGridView
+            // Step 2: Set the DataSource of the DataGridView to the list
             dataGridViewAllClaims.DataSource = claims;
+
+            // Step 3: Set total claims count
+            textBoxTotalClaims.Text = claims.Count.ToString();
         }
     }
 }
