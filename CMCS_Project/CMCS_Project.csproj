@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcademicManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcademicManagerDashboard.Designer.cs">
+      <DependentUpon>AcademicManagerDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoordinatorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AcademicManagerDashboard.resx">
+      <DependentUpon>AcademicManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CoordinatorDashboard.resx">
       <DependentUpon>CoordinatorDashboard.cs</DependentUpon>
     </EmbeddedResource>

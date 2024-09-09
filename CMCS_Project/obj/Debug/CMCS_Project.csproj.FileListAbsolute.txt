@@ -9,3 +9,4 @@ C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Pr
 C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.exe
 C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.pdb
 C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.CoordinatorDashboard.resources
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.AcademicManagerDashboard.resources

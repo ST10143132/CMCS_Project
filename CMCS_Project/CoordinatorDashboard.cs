@@ -8,40 +8,37 @@ namespace CMCS_Project
         public CoordinatorDashboard()
         {
             InitializeComponent();
-
-            // Wire up the event handlers only once here
-            ApproveButton.Click += ApproveButton_Click;
-            RejectButton.Click += RejectButton_Click;
         }
 
-        // Event handler for Approve button
-        private void ApproveButton_Click(object sender, EventArgs e)
+        private void CoordinatorDashboard_Load(object sender, EventArgs e)
         {
-            // Iterate over the DataGridView rows and approve the selected ones
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                bool isSelected = Convert.ToBoolean(row.Cells[0].Value);  // First column is the checkbox
-                if (isSelected)
-                {
-                    row.Cells["ClaimStatus"].Value = "Approved";  // Update claim status
-                }
-            }
-            MessageBox.Show("Selected claims approved!", "Approval");
+            // Simulate data for claims
+            var claims = new System.Data.DataTable();
+            claims.Columns.Add("Claim ID");
+            claims.Columns.Add("Lecturer Name");
+            claims.Columns.Add("Hours Worked");
+            claims.Columns.Add("Status");
+
+            claims.Rows.Add("001", "John Doe", "20", "Pending");
+            claims.Rows.Add("002", "Jane Smith", "25", "Pending");
+
+            // Display the total number of claims
+            textBoxTotalClaims.Text = claims.Rows.Count.ToString();
+
+            // Bind the claims data to the DataGridView
+            dataGridViewClaims.DataSource = claims;
         }
 
-        // Event handler for Reject button
-        private void RejectButton_Click(object sender, EventArgs e)
+        private void buttonApprove_Click(object sender, EventArgs e)
         {
-            // Iterate over the DataGridView rows and reject the selected ones
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                bool isSelected = Convert.ToBoolean(row.Cells[0].Value);  // First column is the checkbox
-                if (isSelected)
-                {
-                    row.Cells["ClaimStatus"].Value = "Rejected";  // Update claim status
-                }
-            }
-            MessageBox.Show("Selected claims rejected!", "Rejection");
+            // Approve logic
+            MessageBox.Show("Claim approved!");
+        }
+
+        private void buttonReject_Click(object sender, EventArgs e)
+        {
+            // Reject logic
+            MessageBox.Show("Claim rejected.");
         }
     }
 }
