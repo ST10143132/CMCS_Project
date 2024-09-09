@@ -10,30 +10,22 @@ namespace CMCS_Project
             InitializeComponent();
         }
 
-        // Event handler for the Browse button
-        private void button1_Click(object sender, EventArgs e)
+        // Event handler for "View Claims" button
+        private void buttonViewClaims_Click(object sender, EventArgs e)
         {
-            // Simulate document upload
-            MessageBox.Show("Document uploaded successfully!");
+            MessageBox.Show("Viewing Claims...");
         }
 
-        // Event handler for the Submit Claim button
-        private void button2_Click(object sender, EventArgs e)
+        // Event handler for "Browse" button
+        private void buttonBrowse_Click(object sender, EventArgs e)
         {
-            // Simulate claim submission
-            MessageBox.Show("Claim submitted successfully!", "Confirmation");
+            MessageBox.Show("Browse for documents...");
         }
 
-        // Event handler to open the Coordinator Dashboard
-        private void button3_Click(object sender, EventArgs e)
+        // Event handler for "Submit" button
+        private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            CoordinatorDashboard dashboard = new CoordinatorDashboard();
-            dashboard.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("Claim submitted!");
         }
     }
 }
