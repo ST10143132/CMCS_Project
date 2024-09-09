@@ -16,146 +16,164 @@
 
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxHoursWorked = new System.Windows.Forms.TextBox();
+            this.textBoxHourlyRate = new System.Windows.Forms.TextBox();
+            this.textBoxClaimsMade = new System.Windows.Forms.TextBox();
+            this.buttonViewClaims = new System.Windows.Forms.Button();
+            this.buttonBrowse = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.groupBoxSubmitClaim = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBoxSubmitClaim.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Location = new System.Drawing.Point(187, 45);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(106, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 15);
+            this.label1.Size = new System.Drawing.Size(243, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Hours Worked";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(129, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 23);
-            this.textBox1.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.textBox1, "Enter the number of hours you worked this month");
+            this.label1.Text = "Lecturer Claim Submit";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(26, 87);
+            this.label2.Location = new System.Drawing.Point(26, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Upload Supporting Documents";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Claims Made:";
             // 
-            // button1
+            // label3
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(86, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 26);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Browse";
-            this.toolTip1.SetToolTip(this.button1, "Click to upload your document");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(231, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Hourly Rate:";
             // 
-            // button2
+            // textBoxHoursWorked
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(86, 147);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 26);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Submit Claim";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.textBoxHoursWorked.Location = new System.Drawing.Point(137, 41);
+            this.textBoxHoursWorked.Name = "textBoxHoursWorked";
+            this.textBoxHoursWorked.Size = new System.Drawing.Size(86, 20);
+            this.textBoxHoursWorked.TabIndex = 1;
             // 
-            // button3
+            // textBoxHourlyRate
             // 
-            this.button3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(142, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(171, 35);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Coordinator Dashboard";
-            this.toolTip1.SetToolTip(this.button3, "View all submitted claims for review");
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.textBoxHourlyRate.Location = new System.Drawing.Point(300, 75);
+            this.textBoxHourlyRate.Name = "textBoxHourlyRate";
+            this.textBoxHourlyRate.Size = new System.Drawing.Size(86, 20);
+            this.textBoxHourlyRate.TabIndex = 4;
             // 
-            // groupBox1
+            // textBoxClaimsMade
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.groupBox1.Location = new System.Drawing.Point(73, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(300, 199);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Submit Your Monthly Claim";
+            this.textBoxClaimsMade.Location = new System.Drawing.Point(111, 75);
+            this.textBoxClaimsMade.Name = "textBoxClaimsMade";
+            this.textBoxClaimsMade.Size = new System.Drawing.Size(86, 20);
+            this.textBoxClaimsMade.TabIndex = 2;
             // 
-            // titleLabel
+            // buttonViewClaims
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.titleLabel.Location = new System.Drawing.Point(138, 9);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(212, 21);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Lecturer Claim Submission";
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonViewClaims.Location = new System.Drawing.Point(69, 113);
+            this.buttonViewClaims.Name = "buttonViewClaims";
+            this.buttonViewClaims.Size = new System.Drawing.Size(86, 35);
+            this.buttonViewClaims.TabIndex = 5;
+            this.buttonViewClaims.Text = "View Claims";
+            this.buttonViewClaims.UseVisualStyleBackColor = true;
+            this.buttonViewClaims.Click += new System.EventHandler(this.buttonViewClaims_Click);
+            // 
+            // buttonBrowse
+            // 
+            this.buttonBrowse.Location = new System.Drawing.Point(137, 104);
+            this.buttonBrowse.Name = "buttonBrowse";
+            this.buttonBrowse.Size = new System.Drawing.Size(86, 26);
+            this.buttonBrowse.TabIndex = 3;
+            this.buttonBrowse.Text = "Browse";
+            this.buttonBrowse.UseVisualStyleBackColor = true;
+            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
+            // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.Location = new System.Drawing.Point(137, 139);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(86, 26);
+            this.buttonSubmit.TabIndex = 4;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            // 
+            // groupBoxSubmitClaim
+            // 
+            this.groupBoxSubmitClaim.Controls.Add(this.label4);
+            this.groupBoxSubmitClaim.Controls.Add(this.textBoxHoursWorked);
+            this.groupBoxSubmitClaim.Controls.Add(this.label5);
+            this.groupBoxSubmitClaim.Controls.Add(this.buttonBrowse);
+            this.groupBoxSubmitClaim.Controls.Add(this.buttonSubmit);
+            this.groupBoxSubmitClaim.Location = new System.Drawing.Point(34, 173);
+            this.groupBoxSubmitClaim.Name = "groupBoxSubmitClaim";
+            this.groupBoxSubmitClaim.Size = new System.Drawing.Size(360, 173);
+            this.groupBoxSubmitClaim.TabIndex = 6;
+            this.groupBoxSubmitClaim.TabStop = false;
+            this.groupBoxSubmitClaim.Text = "Submit Claim";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Hours Worked:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Upload Supporting Documents:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(474, 414);
+            this.ClientSize = new System.Drawing.Size(429, 433);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxClaimsMade);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBoxHourlyRate);
+            this.Controls.Add(this.buttonViewClaims);
+            this.Controls.Add(this.groupBoxSubmitClaim);
             this.Name = "Form1";
             this.Text = "Lecturer Claim Submission";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxSubmitClaim.ResumeLayout(false);
+            this.groupBoxSubmitClaim.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private System.Windows.Forms.Label titleLabel;  // Added title label for the page
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxClaimsMade;
+        private System.Windows.Forms.TextBox textBoxHourlyRate;
+        private System.Windows.Forms.Button buttonViewClaims;
+        private System.Windows.Forms.GroupBox groupBoxSubmitClaim;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxHoursWorked;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonBrowse;
+        private System.Windows.Forms.Button buttonSubmit;
     }
 }
