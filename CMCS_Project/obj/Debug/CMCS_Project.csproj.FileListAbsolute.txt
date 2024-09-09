@@ -1,0 +1,11 @@
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\bin\Debug\CMCS_Project.exe.config
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\bin\Debug\CMCS_Project.exe
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\bin\Debug\CMCS_Project.pdb
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.csproj.AssemblyReference.cache
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.Form1.resources
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.Properties.Resources.resources
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.csproj.GenerateResource.cache
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.csproj.CoreCompileInputs.cache
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.exe
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.pdb
+C:\Users\RC_Student_lab\source\repos\CMCS_Project\CMCS_Project\obj\Debug\CMCS_Project.CoordinatorDashboard.resources
