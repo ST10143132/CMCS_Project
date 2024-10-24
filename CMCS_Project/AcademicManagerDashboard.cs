@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CMCS_Project
@@ -18,6 +19,9 @@ namespace CMCS_Project
                 // Simulate loading claims into DataGridView
                 dataGridView1.Rows.Add(false, "John Doe", "10", "$200", "Pending");
                 dataGridView1.Rows.Add(false, "Jane Smith", "8", "$160", "Pending");
+
+                // Update the claim counters after loading the data
+                UpdateClaimCounters();
             }
             catch (Exception ex)
             {
@@ -35,6 +39,7 @@ namespace CMCS_Project
                 {
                     MessageBox.Show("Selected claims approved.", "Approval",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateClaimCounters();
                 }
                 else
                 {
@@ -58,6 +63,7 @@ namespace CMCS_Project
                 {
                     MessageBox.Show("Selected claims rejected.", "Rejection",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateClaimCounters();
                 }
                 else
                 {
@@ -87,6 +93,24 @@ namespace CMCS_Project
             }
 
             return claimSelected;
+        }
+
+        // Helper method to update the Total, Accepted, Rejected, and Pending claims
+        private void UpdateClaimCounters()
+        {
+            int totalClaims = dataGridView1.Rows.Count;
+            int acceptedClaims = dataGridView1.Rows.Cast<DataGridViewRow>()
+                                   .Count(row => row.Cells["dataGridViewTextBoxColumn4"].Value?.ToString() == "Approved");
+            int rejectedClaims = dataGridView1.Rows.Cast<DataGridViewRow>()
+                                   .Count(row => row.Cells["dataGridViewTextBoxColumn4"].Value?.ToString() == "Rejected");
+            int pendingClaims = dataGridView1.Rows.Cast<DataGridViewRow>()
+                                  .Count(row => row.Cells["dataGridViewTextBoxColumn4"].Value?.ToString() == "Pending");
+
+            // Update the TextBoxes with the calculated values
+            textBoxTotalClaims.Text = totalClaims.ToString();
+            textBoxAccepted.Text = acceptedClaims.ToString();
+            textBoxRejected.Text = rejectedClaims.ToString();
+            textBoxPending.Text = pendingClaims.ToString();
         }
 
         // Sign out button click event
