@@ -18,6 +18,9 @@ namespace CMCS_Project
                 // Add sample data to the DataGridView (replace with database integration later)
                 dataGridView1.Rows.Add(false, "John Doe", "10", "$200", "Pending");
                 dataGridView1.Rows.Add(false, "Jane Smith", "8", "$160", "Pending");
+
+                // Update the counters based on the initial data
+                UpdateClaimCounters();
             }
             catch (Exception ex)
             {
@@ -35,6 +38,7 @@ namespace CMCS_Project
                 {
                     MessageBox.Show("Selected claims approved.", "Approved",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateClaimCounters();
                 }
                 else
                 {
@@ -58,6 +62,7 @@ namespace CMCS_Project
                 {
                     MessageBox.Show("Selected claims rejected.", "Rejected",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateClaimCounters();
                 }
                 else
                 {
@@ -87,6 +92,29 @@ namespace CMCS_Project
             }
 
             return claimSelected;
+        }
+
+        // Helper method to update claim counters (Total, Accepted, Rejected, Pending)
+        private void UpdateClaimCounters()
+        {
+            int totalClaims = dataGridView1.Rows.Count;
+            int acceptedClaims = 0;
+            int rejectedClaims = 0;
+            int pendingClaims = 0;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                string status = row.Cells["dataGridViewTextBoxColumn4"].Value?.ToString();
+                if (status == "Approved") acceptedClaims++;
+                else if (status == "Rejected") rejectedClaims++;
+                else if (status == "Pending") pendingClaims++;
+            }
+
+            // Update the text boxes with the latest counts
+            textBoxTotalClaims.Text = totalClaims.ToString();
+            textBoxAccepted.Text = acceptedClaims.ToString();  // Accepted claims
+            textBoxRejected.Text = rejectedClaims.ToString();  // Rejected claims
+            textBoxPending.Text = pendingClaims.ToString();   // Pending claims
         }
 
         // Sign out and return to Login form
