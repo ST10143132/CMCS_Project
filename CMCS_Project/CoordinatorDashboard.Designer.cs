@@ -36,6 +36,7 @@ namespace CMCS_Project
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.labelTotalPending = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnSignOutCoordinator = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@ namespace CMCS_Project
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.Location = new System.Drawing.Point(182, 20);
+            this.labelTitle.Location = new System.Drawing.Point(207, 22);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(257, 30);
             this.labelTitle.TabIndex = 0;
@@ -53,7 +54,7 @@ namespace CMCS_Project
             // 
             this.labelTotalClaims.AutoSize = true;
             this.labelTotalClaims.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalClaims.Location = new System.Drawing.Point(251, 56);
+            this.labelTotalClaims.Location = new System.Drawing.Point(296, 56);
             this.labelTotalClaims.Name = "labelTotalClaims";
             this.labelTotalClaims.Size = new System.Drawing.Size(99, 20);
             this.labelTotalClaims.TabIndex = 1;
@@ -61,7 +62,7 @@ namespace CMCS_Project
             // 
             // textBoxTotalClaims
             // 
-            this.textBoxTotalClaims.Location = new System.Drawing.Point(265, 79);
+            this.textBoxTotalClaims.Location = new System.Drawing.Point(310, 79);
             this.textBoxTotalClaims.Name = "textBoxTotalClaims";
             this.textBoxTotalClaims.ReadOnly = true;
             this.textBoxTotalClaims.Size = new System.Drawing.Size(57, 20);
@@ -117,23 +118,26 @@ namespace CMCS_Project
             // 
             this.buttonApprove.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonApprove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonApprove.ForeColor = System.Drawing.Color.White;
-            this.buttonApprove.Location = new System.Drawing.Point(169, 314);
+            this.buttonApprove.Location = new System.Drawing.Point(170, 330);
             this.buttonApprove.Name = "buttonApprove";
-            this.buttonApprove.Size = new System.Drawing.Size(100, 40);
-            this.buttonApprove.TabIndex = 1;
+            this.buttonApprove.Size = new System.Drawing.Size(120, 40);
+            this.buttonApprove.TabIndex = 9;
             this.buttonApprove.Text = "Approve";
             this.buttonApprove.UseVisualStyleBackColor = true;
+            this.buttonApprove.Click += new System.EventHandler(this.buttonApprove_Click);
             // 
             // buttonReject
             // 
             this.buttonReject.BackColor = System.Drawing.Color.Firebrick;
             this.buttonReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonReject.ForeColor = System.Drawing.Color.White;
-            this.buttonReject.Location = new System.Drawing.Point(339, 314);
+            this.buttonReject.Location = new System.Drawing.Point(330, 330);
             this.buttonReject.Name = "buttonReject";
-            this.buttonReject.Size = new System.Drawing.Size(100, 40);
-            this.buttonReject.TabIndex = 2;
+            this.buttonReject.Size = new System.Drawing.Size(120, 40);
+            this.buttonReject.TabIndex = 10;
             this.buttonReject.Text = "Reject";
             this.buttonReject.UseVisualStyleBackColor = true;
             this.buttonReject.Click += new System.EventHandler(this.buttonReject_Click);
@@ -191,11 +195,23 @@ namespace CMCS_Project
             this.textBox3.Size = new System.Drawing.Size(61, 20);
             this.textBox3.TabIndex = 8;
             // 
+            // btnSignOutCoordinator
+            // 
+            this.btnSignOutCoordinator.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSignOutCoordinator.Location = new System.Drawing.Point(541, 393);
+            this.btnSignOutCoordinator.Name = "btnSignOutCoordinator";
+            this.btnSignOutCoordinator.Size = new System.Drawing.Size(120, 40);
+            this.btnSignOutCoordinator.TabIndex = 0;
+            this.btnSignOutCoordinator.Text = "Sign Out";
+            this.btnSignOutCoordinator.UseVisualStyleBackColor = true;
+            this.btnSignOutCoordinator.Click += new System.EventHandler(this.btnSignOutCoordinator_Click);
+            // 
             // CoordinatorDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 433);
+            this.Controls.Add(this.btnSignOutCoordinator);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.labelTotalPending);
             this.Controls.Add(this.textBox2);
@@ -234,5 +250,6 @@ namespace CMCS_Project
         private TextBox textBox2;
         private Label labelTotalPending;
         private TextBox textBox3;
+        private Button btnSignOutCoordinator;
     }
 }

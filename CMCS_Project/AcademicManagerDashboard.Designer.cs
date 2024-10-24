@@ -18,7 +18,7 @@ namespace CMCS_Project
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelTotalClaims = new System.Windows.Forms.Label();
             this.textBoxTotalClaims = new System.Windows.Forms.TextBox();
@@ -35,6 +35,8 @@ namespace CMCS_Project
             this.textBoxPending = new System.Windows.Forms.TextBox();
             this.labelTotalRejected = new System.Windows.Forms.Label();
             this.textBoxRejected = new System.Windows.Forms.TextBox();
+            this.btnSignOutManager = new System.Windows.Forms.Button();
+            this.buttonReject = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,8 +70,8 @@ namespace CMCS_Project
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -81,9 +83,9 @@ namespace CMCS_Project
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 153);
+            this.dataGridView1.Location = new System.Drawing.Point(73, 184);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(495, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(495, 93);
             this.dataGridView1.TabIndex = 9;
             // 
             // checkBoxColumn
@@ -116,13 +118,15 @@ namespace CMCS_Project
             // 
             this.buttonApprove.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonApprove.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.buttonApprove.ForeColor = System.Drawing.Color.White;
-            this.buttonApprove.Location = new System.Drawing.Point(274, 309);
+            this.buttonApprove.Location = new System.Drawing.Point(201, 309);
             this.buttonApprove.Name = "buttonApprove";
-            this.buttonApprove.Size = new System.Drawing.Size(100, 40);
+            this.buttonApprove.Size = new System.Drawing.Size(120, 40);
             this.buttonApprove.TabIndex = 10;
             this.buttonApprove.Text = "Approve";
             this.buttonApprove.UseVisualStyleBackColor = true;
+            this.buttonApprove.Click += new System.EventHandler(this.buttonApprove_Click);
             // 
             // labelTotalAccepted
             // 
@@ -177,11 +181,38 @@ namespace CMCS_Project
             this.textBoxRejected.Size = new System.Drawing.Size(49, 20);
             this.textBoxRejected.TabIndex = 2;
             // 
+            // btnSignOutManager
+            // 
+            this.btnSignOutManager.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSignOutManager.Location = new System.Drawing.Point(262, 381);
+            this.btnSignOutManager.Name = "btnSignOutManager";
+            this.btnSignOutManager.Size = new System.Drawing.Size(120, 40);
+            this.btnSignOutManager.TabIndex = 0;
+            this.btnSignOutManager.Text = "Sign Out";
+            this.btnSignOutManager.UseVisualStyleBackColor = true;
+            this.btnSignOutManager.Click += new System.EventHandler(this.btnSignOutManager_Click);
+            // 
+            // buttonReject
+            // 
+            this.buttonReject.BackColor = System.Drawing.Color.Firebrick;
+            this.buttonReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonReject.ForeColor = System.Drawing.Color.White;
+            this.buttonReject.Location = new System.Drawing.Point(361, 309);
+            this.buttonReject.Name = "buttonReject";
+            this.buttonReject.Size = new System.Drawing.Size(120, 40);
+            this.buttonReject.TabIndex = 10;
+            this.buttonReject.Text = "Reject";
+            this.buttonReject.UseVisualStyleBackColor = true;
+            this.buttonReject.Click += new System.EventHandler(this.buttonReject_Click);
+            // 
             // AcademicManagerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 433);
+            this.Controls.Add(this.buttonReject);
+            this.Controls.Add(this.btnSignOutManager);
             this.Controls.Add(this.textBoxPending);
             this.Controls.Add(this.labelTotalPending);
             this.Controls.Add(this.textBoxRejected);
@@ -218,5 +249,7 @@ namespace CMCS_Project
         private TextBox textBoxPending;
         private Label labelTotalRejected;
         private TextBox textBoxRejected;
+        private Button btnSignOutManager;
+        private Button buttonReject;
     }
 }
