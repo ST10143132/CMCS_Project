@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using System;
 
 namespace CMCS_Project
 {
@@ -11,29 +10,27 @@ namespace CMCS_Project
             InitializeComponent();
         }
 
-        // Class to represent a claim record
-        public class ClaimRecord
-        {
-            public string ClaimID { get; set; }
-            public string LecturerName { get; set; }
-            public int HoursWorked { get; set; }
-            public string Status { get; set; }
-        }
-
         private void AcademicManagerDashboard_Load(object sender, EventArgs e)
         {
-            // Step 1: Create a list of ClaimRecord objects to simulate data
-            var claims = new List<ClaimRecord>
-            {
-                new ClaimRecord { ClaimID = "001", LecturerName = "John Doe", HoursWorked = 20, Status = "Approved" },
-                new ClaimRecord { ClaimID = "002", LecturerName = "Jane Smith", HoursWorked = 25, Status = "Pending" }
-            };
+            // Simulate loading data into DataGridView
+            dataGridView1.Rows.Add(false, "John Doe", "10", "$200", "Pending");
+            dataGridView1.Rows.Add(false, "Jane Smith", "8", "$160", "Pending");
 
-            // Step 2: Set the DataSource of the DataGridView to the list
-            dataGridViewAllClaims.DataSource = claims;
+            // Set total claims
+            textBoxTotalClaims.Text = "2";
+            textBoxAccepted.Text = "0";
+            textBoxRejected.Text = "0";
+            textBoxPending.Text = "2";
+        }
 
-            // Step 3: Set total claims count
-            textBoxTotalClaims.Text = claims.Count.ToString();
+        private void buttonApprove_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Approved claims.");
+        }
+
+        private void buttonReject_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Rejected claims.");
         }
     }
 }
